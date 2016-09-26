@@ -1,0 +1,30 @@
+<!--影院列表-->
+<loading hidden="{{!loading}}">
+  加载中...
+</loading>
+<view class="container">
+	<view><text>{{day}}影院票房</text></view>
+    <view class="flex item">
+      <view class="flex_auto item_left">
+      	<view><text class="title">票房排行</text></view>
+        <view><text class="title">影院名称</text></view>
+        <view><text class="sub_title">总票房</text></view>
+        <view><text class="tag">总人次</text></view>
+        <view><text class="tag">场均票价</text></view>
+        <view><text class="tag">平均票价</text></view>
+      </view>
+  <block wx:for-items="{{cinemas}}">
+    <view class="flex item">
+    <navigator url="../cinema/cinema?id={{item.mId}}"> 
+      <view class="flex_auto item_left">
+      	<view><text class="title">{{item.order}}</text></view>
+        <view><text class="title">{{item.mTitle}}</text></view>
+        <view><text class="sub_title">{{item.rev}}</text></view>
+        <view><text class="sub_title">{{item.saledSeat}}</text></view>
+        <view><text class="tag">{{item.seatPerShow}}</text></view>
+        <view><text class="tag">{{item.saledSeat}}</text></view>
+      </view>
+    </navigator>
+    </view>
+  </block>
+</view>

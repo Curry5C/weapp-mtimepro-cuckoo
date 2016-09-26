@@ -1,0 +1,49 @@
+<!--电影列表-->
+<loading hidden="{{!loading}}">
+  加载中...
+</loading>
+  <view class='chart_title'>
+  	<view class='chart_title_li'>
+  	<text class='day_all day_max'>今日总票房</text>
+  	<text class='day_all_num day_min'>{{boxoffice}}</text>
+  </view>
+  <view class='chart_title_li border'>
+    <text class="day_max">今日总排场</text>
+    <text class='day_min'>{{sumSCnt}}</text>
+  </view>
+   <view class='chart_title_li'>
+    <text class="day_all day_max">新上映</text>
+    <text class='day_min'>{{newMovieCnt}}</text>
+  </view>
+  </view>
+  <view>
+  	<text>影片名称</text>
+  	<text>实时票房</text>
+  	<text>排片占比</text>
+  	<text>上座率</text>
+  	<text>累计票房</text>
+  </view>
+  <scroll-view scroll-y="true" class="page-body">
+    <block wx:for="{{movies}}">
+    	<view><text>{{item.order}}</text></view>
+    	<view>
+    		<text>{{item.mTitle}}</text>
+    		<text>已上映{{item.days}}天</text>
+    	</view>
+     	<view>
+    		<text>{{item.rev}}</text>
+    		<text>{{item.revRate}}</text>
+    	</view>
+    	<view>
+    		<text>{{item.sCntRate}}</text>
+    		<text>{{item.scnt}}</text>
+    	</view>
+    	<view>
+    		<text>{{item.saledRate}}</text>
+    	</view>
+    	<view>
+    		<text>{{item.sumRev}}</text>
+    	</view>
+
+    </block>
+  </scroll-view>

@@ -1,0 +1,9 @@
+<!--电影列表-->
+<scroll-view scroll-y="true">
+  <view class="meta">
+    <text class="title">实票房</text>
+  </view>
+  <view class="summary">
+    <text class="label">摘要：</text>
+  </view>
+</scroll-view>

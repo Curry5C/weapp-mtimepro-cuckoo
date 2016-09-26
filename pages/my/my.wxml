@@ -1,0 +1,6 @@
+<!--电影列表-->
+<scroll-view scroll-y="true">
+  <view class="meta">
+    <text class="title">xiaoyuhen</text>
+  </view>
+</scroll-view>
